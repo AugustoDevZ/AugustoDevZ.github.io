@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Augusto 🌎</title>
+  
+  <link rel="icon" type="image/x-icon" href="./assets/rel-icon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+
+
+  <div id="aura"></div>
+  <div id="circulo"></div>
+
+  <script>MoseEvent()</script>
+
+  
+<canvas id="galaxy"></canvas>
+
+<script>
+  const canvas = document.getElementById("galaxy");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const STAR_COUNT = 1800; 
+  const stars = [];
+  const focal = canvas.width / 2;
+
+  // === BLOQUES DE MINECRAFT CON GIRO ===
+  const BLOCK_COUNT = 50; 
+  const blocks = [];
+  const blockImg = new Image();
+  blockImg.src = "./assets/images/block.png"; // tu icono
+
+  for (let i = 0; i < BLOCK_COUNT; i++) {
+    blocks.push({
+      x: (Math.random() - 0.5) * canvas.width * 3,
+      y: (Math.random() - 0.5) * canvas.height * 3,
+      z: Math.random() * canvas.width,
+      size: 40 + Math.random() * 30,
+      speed: Math.random() * 2 + 0.5,
+      angle: Math.random() * Math.PI * 2,  // ángulo inicial
+      spin: (Math.random() * 0.03) + 0.01 // velocidad de giro
+    });
+  }
+
+  // === ESTRELLAS ===
+  for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push({
+      x: (Math.random() - 0.5) * canvas.width * 3,
+      y: (Math.random() - 0.5) * canvas.height * 3,
+      z: Math.random() * canvas.width,
+      speed: Math.random() * 3 + 0.5
+    });
+  }
+
+  let globalAngle = 0;
+
+  function project(obj) {
+    // rotación global del espacio
+    const rx = obj.x * Math.cos(globalAngle) - obj.y * Math.sin(globalAngle);
+    const ry = obj.x * Math.sin(globalAngle) + obj.y * Math.cos(globalAngle);
+
+    const k = focal / obj.z;
+
+    return {
+      px: rx * k + canvas.width / 2,
+      py: ry * k + canvas.height / 2,
+      scale: 1 - obj.z / canvas.width
+    };
+  }
+
+  function draw() {
+    ctx.fillStyle = "rgba(3,0,20,0.4)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    globalAngle += 0.0008;
+
+    stars.forEach(s => {
+      s.z -= s.speed;
+      if (s.z <= 0) s.z = canvas.width;
+
+      const { px, py, scale } = project(s);
+
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(168, 167, 174, ${scale})`;
+      ctx.arc(px, py, scale * 3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+
+    blocks.forEach(b => {
+      b.z -= b.speed;
+      if (b.z <= 0) b.z = canvas.width;
+
+      const { px, py, scale } = project(b);
+      const size = b.size * scale;
+
+     
+      b.angle += b.spin;
+
+      ctx.save();
+      ctx.translate(px, py);      
+      ctx.rotate(b.angle);       
+      ctx.drawImage(blockImg, -size / 2, -size / 2, size, size);
+      ctx.restore();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  blockImg.onload = draw;
+
+  window.onresize = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  };
+</script>
+
+  <nav >
+    <div class="navar">
+      <div class="navar-img">
+        <img src="/assets/images/perfil.png" alt="">
+      </div>
+      <h1 class="navar-title"> AUGUSTO.DEV </h1>
+      <div>
+        <ul class="navar-links">
+          <li><a class="al" id="openModal" >Sobre mí</a></li>
+          <li><a class="al" href="#Habilidades">Habilidades</a></li>
+          <li><a class="al" href="#Proyectos">Proyectos</a></li>
+          <li><a class="al" href="#Contactos">Contacto</a></li>
+        </ul>
+      </div>
+
+
+      <div class="BtnDowloandCv">
+          <a href="https://discord.gg/rNhv8fbR3r"><img src="/assets/images/zadints.png" alt=""></a>
+          <a href="index.html"><img  src="/assets/images/dev.png" alt=""></a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="SobreMi" >
+    <div style="position: absolute;
+    top: 40mm;
+    left: 80mm;">
+      <h2 class="lblWelcome">Buenas, soy</h2>
+      <h3 class="lblWelcome">Augusto</h3>
+      <h4 class="lblWelcome">Desarrollador Senior Minecraft</h4>
+      <h4 class="lblWelcome">Experto en crear modalidades con <br>mecanismos innovadores por más de 8 años</h4>
+      <a class="openModal" href="#Contactos">Charlemos sobre tu proyecto innovador</a>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Quien soy?</h2>
+        <div class="DescriptionText">Soy un desarrollador full stack junior apasionado por crear soluciones innovadoras. Actualmente curso la carrera de Ingeniería de Sistemas y cuento con un año de experiencia trabajando con tecnologías de escritorio y web. Me caracterizo por mi capacidad para trabajar en equipo, adaptarme a diferentes entornos tecnológicos y aprender nuevos conceptos con rapidez.</div>
+                
+      </div>
+    </div>
+
+    <script>modal(); modal2()</script>
+  </section>
+  
+
+  <div class="imgFotoPerfil">
+    <img src="/assets/images/perfil.png" alt="Foto perfil" >
+  </div>
+
+  <section >
+      <div class="divSobreMi">
+          
+      </div>
+  </section>
+
+  
+  <section id="Proyectos">
+    <div class="Proyectos">
+      <h2 class="Proyectos">
+        Proyectos Destacados
+      </h2>
+      <a class="proyectos-case" href="https://www.youtube.com/watch?v=PSNO1KU9hM8">
+        
+          <img src="/assets/images/reil.png" alt="">
+          <div class="proyectos-case-content">
+            <h2>Reilcraft Network</h2>
+            <h3>📖 Servidor mmorpg con su modalidad de Survival fantasy y RPG (servidor cerrado)</h3>
+
+            <div class="proyectos-case-content-info">
+              <p>MMOcore</p>
+              <p>MMOitems</p>
+              <p>Skript</p>
+              <p>ItemsAdder</p>
+              <p>Mythicmobs</p>
+              <p>Java</p>
+            </div>
+            
+          </div>
+      </a>
+      
+      <a href="https://www.youtube.com/watch?v=swrLaGYr3cU"class="proyectos-case">
+      
+        <img src="/assets/images/xino.png" alt="">
+        <div class="proyectos-case-content">
+          <h2>XinoMC</h2>
+          <h3>🔮 Servidor de survival custom con una historia por contar y disfrutar.</h3>
+
+          <div class="proyectos-case-content-info">
+            <p>AureliumSkills</p>
+            <p>ItemeEdit</p>
+            <p>ConditionalsEvents</p>
+            <p>Mythicmobs</p>
+            <p>Java</p>
+          </div>
+          
+        </div>
+      </a>
+      <h2 class="Proyectos">
+        Otros recursos
+      </h2>
+        <div class="Cube">
+          <h2>Puedes seguir uno de estos videos para ver mi experiencia en este mundo de cubos :D.</h2>
+          <a href="https://www.youtube.com/watch?v=FQwyPYPqQ1s" class="Cube-case"><img src="/assets/images/epc.png" alt=""><h3>Nebuldev • Enseñando conceptos</h3></a>
+          <a href="https://www.youtube.com/watch?v=oE3H19clPTQ" class="Cube-case"><img src="/assets/images/boss.png" alt=""><h3>Nebuldev • Los primeros bosses</h3></a>
+          <a href="https://www.youtube.com/watch?v=3i6IEP9ll_8" class="Cube-case"><img src="/assets/images/npc.png" alt=""><h3>Nebuldev • Los npc hablan</h3></a>
+          <a href="https://www.youtube.com/watch?v=xGAMO6bJhJE&feature=youtu.be" class="Cube-case"><img src="/assets/images/samus.png" alt=""><h3>Nebuldev • Implementando skill samus</h3></a>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Habilidades">
+    <div class="Habilidades" >
+      <h2>Mis habilidades</h2>
+      <div class="Case"><img src="/assets/images/java.png" alt="">Java</div>
+      <div class="Case"><img src="/assets/images/json.png" alt="">Json</div>
+      <div class="Case"><img src="/assets/images/yaml.png" alt="">Yaml</div>
+      <div class="Case"><img src="/assets/images/sk.png" alt="">Skript</div>
+      <div class="Case"><img src="/assets/images/bc.png" alt="">Modelado 3d</div>
+      <div class="Case"><img src="/assets/images/secure.png" alt="">Seguridad</div>
+      
+      <h2 style="font-size: 15px;">habilidades blandas</h2>
+
+      <div class="CaseBlando">Trabajo en equipo</div>
+      <div class="CaseBlando">Comunicacion</div>
+      <div class="CaseBlando">Liderazgo</div>
+      <div class="CaseBlando">Adaptabilidad</div>
+      <div class="CaseBlando">Creatividad</div>
+      <div class="CaseBlando">Ética profesional</div>
+    </div>
+  </section>
+
+  <section id="Contactos">
+    <a href="https://discord.gg/rNhv8fbR3r">
+
+      <div class="contacto">
+      <h2>¿Tienes algun proyecto en mente?</h2>
+      <h3>Hablemos y transformémoslo en realidad</h3>
+      <div class="contacto-case"><img src="/assets/images/dsicord.png" alt=""><h4>Discord</h4><h3>Contactame por mi cuenta • nebuldev</h3><h5>Respuesta al rededor de las 10 horas</h5></div>
+    </div>
+    </a>
+    
+  </section>
+</body>
+
+</html>
