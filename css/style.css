@@ -808,7 +808,7 @@ h2.Proyectos {
  
 }
 
-.Cube-case{
+a.Cube-case{
   
   margin: 15px;
   background-color: #f6fbff38;
@@ -825,4 +825,5 @@ h2.Proyectos {
   border-radius: 15px;
   position: relative;
   width: 50mm;
+
 }
