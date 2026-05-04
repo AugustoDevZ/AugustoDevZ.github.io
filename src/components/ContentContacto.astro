@@ -1,0 +1,151 @@
+<div class="bg-content flex-gap" style="--gap: 10rem;">
+    <div class="display-flex" style=" --direction: column;">
+        <h3 class="title">¿Algun proyecto en mente?</h3>
+
+        <h4 class="contact-text">Hablemos y transformémoslo en realidad</h4>
+
+        <ul
+            class="display-flex flex-gap"
+            style=" --direction: row; --gap: 2rem;"
+        >
+            <li>
+                <a class="button-type1" href="https://t.me/Nebuldiego"
+                    ><i class="fa-regular fa-paper-plane"></i>Telegram</a
+                >
+            </li>
+            <li>
+                <a
+                    class="button-type2"
+                    href="https://discord.com/users/1302782048016007229"
+                    ><i class="fa-brands fa-discord"></i> Discord</a
+                >
+            </li>
+        </ul>
+    </div>
+
+    <div class="display-flex" style="--aling: center;">
+        <div
+            class="image-content-border correo-content"
+            style="--width: 27rem; --height: 12rem; --color: #1C173C;"
+        >
+        </div>
+    </div>
+
+    <style>
+        :root {
+            --justify: center;
+            -direction: column;
+            --aling: center;
+        }
+
+        .bg-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+        .display-flex {
+            display: flex;
+            justify-content: var(--justify);
+            flex-direction: var(--direction);
+            align-items: var(--aling);
+        }
+        .flex-gap {
+            gap: var(--gap);
+        }
+
+        .flex-1 {
+            flex: 1;
+            padding: 2rem;
+            height: 30%;
+        }
+
+        .title {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .contact-text {
+            color: #8081b9;
+            font-weight: lighter;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+        .button-type1 {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            padding: 0.8rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #090c19;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 1s ease;
+        }
+        .button-type1:hover {
+            background: linear-gradient(90deg, #b2d3e0, #818cf8, #84fcb2);
+        }
+
+        .fa-regular {
+            padding-right: 0.5rem;
+        }
+        .button-type2 {
+            background: #0d0d27;
+            border: 1px solid #1b1b42;
+            padding: 1rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .button-type2:hover {
+            color: #02c1ab;
+        }
+
+        .correo-content {
+            object-fit: cover;
+            overflow: hidden;
+            box-shadow: 0 0 5mm #1e1a44;
+            animation: pulso-luz 2s infinite alternate;
+            background-color: #0d0d28;
+        }
+
+        .image-content-border {
+            width: var(--width);
+            height: var(--height);
+            border-radius: 24px;
+            border: 1px solid var(--color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-content-border:hover {
+            border: 1px solid #08696B;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .bg-content {
+                padding: 2rem;
+            }
+
+            .display-flex {
+                align-items: center;
+            }
+        }
+    </style>
+</div>

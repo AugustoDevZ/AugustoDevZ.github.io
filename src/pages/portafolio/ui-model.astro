@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="UI-MODEL_1"
+			tag1="Windows App"
+			tag2="UI"
+			tag3="Front"
+			context="El proyecto inició como una aplicación de escritorio en WPF para un trabajo universitario. Sin embargo, al evaluar su alcance y potencial, decidí migrarlo a una aplicación web, con el objetivo de mejorar su accesibilidad, usabilidad y presentación, convirtiéndolo finalmente en una pieza de mi portafolio personal."
+			reto="Crear una interfaz de escritorio en WPF con un diseño moderno, intuitivo y centrado en UI/UX, asegurando una experiencia de usuario fluida, adaptable y visualmente atractiva, manteniendo al mismo tiempo la funcionalidad requerida para el proyecto académico."
+
+			solution = "Desarrollé el diseño UI a una aplicación WPF completamente funcional, implementando componentes reutilizables y una interfaz moderna enfocada en usabilidad y presentación visual."		
+			result = "Se obtuvo una interfaz profesional y visualmente atractiva que posteriormente seria demostrando en mis habilidades en diseño UI, desarrollo frontend y creación de experiencias windows modernas."
+
+			stack={["WPF", "SQL"]}
+
+			role = "Individual Desarrollo Frontend"
+			img = {["/ui.png", "/ui_2.png"]}
+		/>
+	</div>
+</Layout>

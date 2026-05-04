@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="ScanEx"
+			tag1="Windows APP"
+			tag2="API External"
+			tag3="UI"
+			context="Inició como una propuesta para desarrollar una aplicación capaz 
+			de procesar archivos de texto extensos que contenían grandes volúmenes de datos y clasificar automáticamente su contenido."
+			reto="	Crear una aplicación para leer, separar y buscar contenido de un archivo de bases de datos de texto"
+
+			solution = "Desarrollé de manera individual una aplicación capaz de procesar archivos de texto extensos, separando la información automáticamente y permitiendo búsquedas rápidas y eficientes dentro de grandes volúmenes de datos. La solución optimizó la organización y acceso a la información mediante un sistema de clasificación estructurado."		
+			result = "Se obtuvo una aplicación funcional con una interfaz moderna e intuitiva, capaz de procesar grandes archivos de texto de manera eficiente. La plataforma permitió organizar, clasificar y buscar información rápidamente, mejorando la experiencia del usuario y facilitando el acceso a los datos."
+
+			stack={["SQL", "WPF C#"]}
+
+			role = "Individual Desarrollo Full Stack"
+			img = {["/ScanEx.png", "/ScanEx_2.png"]}
+		/>
+	</div>
+</Layout>

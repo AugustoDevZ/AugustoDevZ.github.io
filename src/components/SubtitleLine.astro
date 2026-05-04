@@ -1,0 +1,35 @@
+---
+const { subTitle, icon } = Astro.props;
+---
+
+<div class="subtitle" >
+    
+    <h2 ><i class={icon}></i> <span class="title" >{subTitle}</span></h2>
+</div>
+
+<style>
+
+    .content-icon{
+        border-radius: 12px;
+        background-color: #161432;
+        padding: 0.5rem;
+        color: #4B40A3;
+        font-size: 14px;
+    }
+
+    .title{
+        margin-left: 1rem;
+        font-weight: lighter;
+        
+    }
+
+    .subtitle{
+         padding-top: 3rem;
+         width: 100%;
+         color: white;
+         font-size: 12px;
+         
+    }
+
+    
+</style>

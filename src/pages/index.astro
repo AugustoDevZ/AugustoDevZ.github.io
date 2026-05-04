@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Content from "../components/ContentMain.astro";
+import Line from "../components/line.astro";
+import SubLine from "../components/SubtitleLine.astro";
+import ContentGroup from "../components/ContentProject.astro";
+import ContentGroup2 from "../components/ContentProject2.astro";
+import Footer from "../components/Footer.astro"
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="#portafolio"/>
+	<div style="padding: 6rem;  ">
+		<Content/>
+		<section id="portafolio" ></section>
+		<Line
+			oneTitle="Proyectos"
+			twoTitle="Destacados"
+			textContent="Todos los proyectos están ordenados por categorias para una mejor visualización"
+		/>
+		<SubLine subTitle="Soluciones completas" icon = "fa-solid fa-building-circle-check content-icon"/>
+		<ContentGroup/>
+		<SubLine subTitle="Proyectos Front" icon = "fa-solid fa-code content-icon"/>
+		<ContentGroup2/>
+		
+	</div>
+	<Footer/>
+</Layout>
+
+
+

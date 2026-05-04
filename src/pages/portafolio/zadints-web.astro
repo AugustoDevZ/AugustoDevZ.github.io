@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="Zadints Tech"
+			tag1="Web App"
+			tag2="API"
+			tag3="Plataform"
+			context="Soy el fundador de Zadints Tech, una marca que actualmente se encuentra offline. Tal como cree el bot cree la paltaforma web para ofrecer los servicios y detalles de mi marca. además de un panel pequeño apra conectar en un futuro nuestro bot."
+			reto="	Desarrollar una plataforma, para mi marca Zadints ,en la cual los usuarios puedan interactuar con nuestros servicios."
+
+			solution = "Desarrollé una plataforma web completa para la marca Zadints Tech, enfocada en la presentación de servicios y la interacción con usuarios. Implementé una interfaz moderna, responsiva y orientada a UI/UX, junto con una arquitectura preparada para futuras integraciones, incluyendo un panel administrativo destinado a la conexión con un bot y la gestión de servicios."		
+			result = "Se obtuvo una plataforma funcional y escalable que permitió centralizar la información de la marca y mejorar su presentación digital. El sistema quedó preparado para futuras expansiones, incluyendo la integración con herramientas automatizadas, consolidando la identidad de Zadints Tech dentro de un entorno web profesional."
+
+			stack={["SQL", "MySQL", "React", "Vite", "ASP.Net"]}
+
+			role = "Individual Desarrollo Full Stack"
+			img = {["/zadints.png", "/zadints_2.png"]}
+		/>
+	</div>
+</Layout>

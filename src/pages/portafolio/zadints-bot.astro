@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="Zadints Bot"
+			tag1="Bot APP"
+			tag2="Discor App"
+			tag3=""
+			context="Cree un bot de utilidades y seguridad con la finalidad de adminstrar mis grupos de discord. Luego decidí expander apra hacerlo público logrando asi el mejor bot de utilidades que actualmente se encuentra off por motivos económicos.
+			"
+			reto="	Desarrollar un bot escalable y eficiente capaz de administrar múltiples servidores de Discord, integrando herramientas de moderación, seguridad y automatización."
+
+			solution = "Desarrollé de manera individual un bot multifuncional para Discord enfocado en utilidades, automatización y seguridad. Implementé sistemas de moderación, comandos personalizados, gestión automática y herramientas administrativas, optimizando la administración de comunidades y mejorando la experiencia de los usuarios mediante comandos embeds."		
+			result = "Se obtuvo un bot estable, rápido y altamente configurable, utilizado para la administración y automatización de múltiples comunidades en Discord. La implementación de sistemas de seguridad, moderación y utilidades mejoró significativamente la gestión de servidores, ofreciendo además una experiencia visual moderna mediante comandos embeb con interfaces intuitivas."
+
+			stack={["SQL", "MySQL", "Discord.Net"]}
+
+			role = "Individual Desarrollo Full Stack"
+			img = {["/bot.png", "/bot_2.png"]}
+		/>
+	</div>
+</Layout>

@@ -1,0 +1,95 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<ClientRouter />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+		/>
+		<meta name="generator" content={Astro.generator} />
+
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<canvas id="bg"></canvas>
+		<main class="content-index-1">
+			<slot />
+		</main>
+	</body>
+</html>
+
+<script>
+	import { animateBackground } from "../layouts/animacion";
+
+	function init() {
+		animateBackground();
+	}
+
+	document.addEventListener("DOMContentLoaded", init);
+	document.addEventListener("astro:after-swap", init);
+</script>
+
+<style>
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		
+	}
+	html,
+	body {
+		font-family: "Poppins", sans-serif;
+		padding: 0;
+		margin: 0;
+		 box-sizing: border-box;
+	}
+
+	#bg {
+		position: fixed;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	a,
+	li {
+		text-decoration: none;
+		list-style: none;
+	}
+
+	.content-index-1 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+
+	@media (min-width: 1024px){
+
+	.content-index-1{
+		justify-content: center;
+	}
+
+
+	
+
+}
+
+
+
+</style>

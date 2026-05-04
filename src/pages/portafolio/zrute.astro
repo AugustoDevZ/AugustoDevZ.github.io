@@ -1,0 +1,47 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="Zrute"
+			tag1="Web APP"
+			tag2="API"
+			tag3="Maps API"
+			context="Inició como una propuesta enfocada en resolver una
+                    problemática cotidiana: la falta de información para
+                    turistas y ciudadanos sobre las empresas de transporte
+                    público, sus rutas y las unidades que circulan cerca de su
+                    ubicación en la ciudad de Trujillo, Perú."
+			reto="	Un sistema para trazar las rutas de las empresas de
+					transporte que pasan cerca de la ubiación del usuario y
+					de su destino."
+
+			solution = "Desarrollé, junto a un equipo de colaboradores, una
+                        aplicación web interactiva que integra las rutas reales
+                        de las empresas de transporte público de Trujillo. La
+                        plataforma permite visualizar en un mapa las rutas que
+                        pasan cerca de la ubicación actual del usuario y de su
+                        destino, facilitando la movilidad dentro de la ciudad.
+                        Además, el sistema incorpora una sección de reseñas y un
+                        foro comunitario donde los usuarios pueden compartir
+                        experiencias, recomendaciones y publicaciones
+                        relacionadas con sus viajes dentro de la aplicación."		
+			result = "Se obtuvo mayores reseñas positivas de la app las cuales
+                    demuestran que el proyecto cumplió con el objetivo de
+                    informar de las rutas y planificar su futuro viaje."
+
+			stack={["SQL", "React Native", "ASP .net", "Node.js"]}
+
+			role = "Líder de Desarrollo Full Stack"
+			img = ""
+		/>
+	</div>
+</Layout>

@@ -1,0 +1,236 @@
+<div
+    class="bg-content flex-gap"
+    style=" --direction: row; --aling: start ; --gap: 10rem;"
+>
+    <div class="display-flex" style=" --direction: column;">
+        <h2
+            class="icon-button display-flex flex-row"
+            style="--justify: center; --direction: row; "
+        >
+            <div class="punto"></div> Sobre mi
+        </h2>
+        <h3 class="title">¿Quien</h3>
+        <h3 class="title-gradient">soy?</h3>
+
+        <h4 class="lore">
+            Hola, soy César, estudiante de Ingeniería de Sistemas<br />
+            Computacionales y apasionado por el desarrollo de software. Desde<br
+            />
+            hace más de un año, me dedico a crear soluciones digitales enfocadas<br
+            />
+            en resolver problemas de manera práctica, moderna e innovadora.<br
+            />
+            <br />
+
+            Me considero una persona adaptable, responsable y con facilidad para<br
+            />
+            trabajar en equipo. Disfruto aprender constantemente nuevas<br />
+            tecnologías y enfrentar retos que me permitan crecer tanto a nivel<br
+            />
+            profesional como personal.<br />
+            <br />
+
+            Más allá de la programación, también encuentro inspiración en la<br
+            />
+            música, el deporte y la robótica. Estas áreas fortalecen mi<br />
+            creatividad y me ayudan a mantener una visión más humana, dinámica e<br
+            />
+            innovadora en cada proyecto que desarrollo.<br />
+        </h4>
+
+        <ul
+            class="display-flex flex-gap"
+            style=" --direction: row; --gap: 2rem;"
+        >
+            <li>
+                <a class="button-type" href="/"
+                    ><i class="fa-regular fa-address-book"></i>Ver Portafolio</a
+                >
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex-1 display-flex" style="--aling: center;">
+        <div
+            class="image-content-border"
+            style="--size: 25.5rem; --color: #1C173C;"
+        >
+            <div
+                class="image-content-border"
+                style="--size: 24rem; --color: #0B1F27;"
+            >
+                <div
+                    class="image-content-border image-content"
+                    style="--size: 21rem; --color: #0B1F27;"
+                >
+                    <img src="/perfil.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    :root {
+        --justify: center;
+        -direction: column;
+        --aling: end;
+    }
+
+    .bg-content {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .display-flex {
+        display: flex;
+        justify-content: var(--justify);
+        flex-direction: var(--direction);
+        align-items: var(--aling);
+    }
+    .flex-gap {
+        gap: var(--gap);
+    }
+
+    .flex-1 {
+        flex: 1;
+    }
+
+    .icon-button {
+        background-color: #0b0b1c;
+        border-radius: 30px;
+        color: #948ee9;
+        font-size: 12px;
+        font-weight: lighter;
+        padding: 0.3rem;
+        padding-right: 1rem;
+        border: 1px solid #1b1b42;
+        transition: border-color 0.2s ease;
+        margin: 0;
+    }
+
+    .icon-button:hover {
+        border-color: #02c1ab;
+        box-shadow: 0 0 6px #02c1ab8c;
+    }
+
+    .punto {
+        padding: 0.2rem;
+        background-color: rgb(0, 255, 200);
+        margin: 0.4rem;
+        border-radius: 20px;
+    }
+
+    .title {
+        color: #ffffff;
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .title-gradient {
+        background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .lore {
+        color: #8081b9;
+        font-weight: lighter;
+    }
+
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+    }
+
+    .button-type {
+    display: inline-block;
+
+    background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+
+    padding: 0.8rem 1.5rem;
+
+    border-radius: 14px;
+    text-decoration: none;
+
+    color: #090c19;
+    font-weight: 600;
+    font-size: 14px;
+    animation: pulse 2s ease infinite;
+    transition: 0.3s ease;
+}
+
+/* hover */
+.button-type:hover {
+    background: linear-gradient(90deg, #83bed8, #818cf8, #c084fc);
+
+    box-shadow: 0 0 20px #0c4f52ce;
+
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+    .fa-regular {
+        padding-right: 0.5rem;
+    }
+
+    .image-content {
+        object-fit: cover;
+        overflow: hidden;
+        box-shadow: 0 0 10mm #0c4f525e;
+        animation: pulso-luz 2s infinite alternate;
+    }
+    .image-content img {
+        width: 100%;
+        height: auto;
+    }
+    .image-content-border {
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        border: 1px solid var(--color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes pulso-luz {
+        0% {
+            box-shadow: 0 0 10px #0c4f525e;
+        }
+        50% {
+            box-shadow: 0 0 30px #14757a69;
+        }
+        100% {
+            box-shadow: 0 0 10px #29afb641;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .bg-content {
+            padding: 2rem;
+        }
+
+        .display-flex {
+            align-items: center;
+        }
+    }
+</style>

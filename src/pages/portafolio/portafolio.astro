@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="Web Portafolio"
+			tag1="Web APP"
+			tag2="SSG"
+			tag3="Front"
+			context="La necesidad de contar con una plataforma profesional donde reclutadores, clientes y empresas pudieran conocer fácilmente mis proyectos, experiencia, habilidades técnicas y trayectoria como desarrollador."
+			reto="Diseñar y desarrollar un portafolio web moderno, atractivo y optimizado que permitiera presentar mis proyectos, habilidades y experiencia profesional de manera clara, accesible y visualmente profesional."
+
+			solution = "Desarrollé un portafolio web personalizado enfocado en rendimiento, diseño moderno y experiencia de usuario. Implementé una interfaz responsive, animaciones interactivas, secciones dinámicas para proyectos y una estructura optimizada para mostrar de forma profesional mi experiencia y tecnologías utilizadas."		
+			result = "Se obtuvo una plataforma profesional y visualmente atractiva que facilita la presentación de mis proyectos y experiencia. El sitio mejoró mi presencia digital, permitiendo que reclutadores y clientes potenciales conozcan fácilmente mis habilidades, trabajos realizados y capacidades como desarrollador."
+
+			stack={["Astro", "Node.js", "JavaScript"]}
+
+			role = "Individual Desarrollo Frontend"
+			img = {}
+		/>
+	</div>
+</Layout>
