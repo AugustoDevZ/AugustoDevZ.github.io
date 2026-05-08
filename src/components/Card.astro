@@ -11,9 +11,10 @@ interface Props {
     stack: string[];
     role: string;
     img: string[];
+    link: string;
 }
 
-const { Title, tag1, tag2, tag3, context, reto, solution, result, role, img } =
+const { Title, tag1, tag2, tag3, context, reto, solution, result, role, img , link} =
     Astro.props;
 
 const { stack = [] } = Astro.props;
@@ -95,6 +96,8 @@ const { stack = [] } = Astro.props;
                     </div>
                 )
             }
+            
+            <a class="stats" href={link}><div>Visita Proyecto</div></a>
         </div>
     </div>
 </div>

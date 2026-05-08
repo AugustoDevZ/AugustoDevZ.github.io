@@ -1,6 +1,28 @@
+---
+/*
+<div class="display-flex" style="--aling: center;">
+        <div
+            class="image-content-border"
+            style="--size: 25.5rem; --color: #1C173C;"
+        >
+            <div
+                class="image-content-border"
+                style="--size: 24rem; --color: #0B1F27;"
+            >
+                <div
+                    class="image-content-border image-content"
+                    style="--size: 21rem; --color: #0B1F27;"
+                >
+                    <img src="/perfil.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+*/
+---
 <div
     class="bg-content flex-gap"
-    style=" --direction: row; --aling: start ; --gap: 10rem;"
+    style=" --direction: row; --aling: center ; --gap: 10rem;"
 >
     <div class="display-flex" style=" --direction: column;">
         <h2
@@ -9,13 +31,14 @@
         >
             <div class="punto"></div> Disponible para proyectos
         </h2>
-        <h3 class="title">Nuevas ideas</h3>
-        <h3 class="title-gradient">nuevas</h3>
-        <h3 class="title">soluciones</h3>
+        <h3 class="title">Creando siempre</h3>
+        <h3 class="title-gradient">soluciones</h3>
+        <h3 class="title">nueva e innovadoras</h3>
 
         <h4 class="lore">
-            Soy César - un desarrollador de sofware apasionado por <br /> crear soluciones
-            innovadoras.
+            Hola, soy César - Un desarrollador de sofware apasionado con <br /> 
+            1 año de experiencia creando soluciones
+            innovadoras .
         </h4>
 
         <ul
@@ -35,24 +58,7 @@
         </ul>
     </div>
 
-    <div class="flex-1 display-flex" style="--aling: center;">
-        <div
-            class="image-content-border"
-            style="--size: 25.5rem; --color: #1C173C;"
-        >
-            <div
-                class="image-content-border"
-                style="--size: 24rem; --color: #0B1F27;"
-            >
-                <div
-                    class="image-content-border image-content"
-                    style="--size: 21rem; --color: #0B1F27;"
-                >
-                    <img src="/perfil.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 <style>
@@ -74,6 +80,7 @@
         justify-content: var(--justify);
         flex-direction: var(--direction);
         align-items: var(--aling);
+        text-align: center;
     }
     .flex-gap {
         gap: var(--gap);
@@ -205,6 +212,7 @@
 
     @media (max-width: 768px) {
         .bg-content {
+            
             padding: 2rem;
         }
 

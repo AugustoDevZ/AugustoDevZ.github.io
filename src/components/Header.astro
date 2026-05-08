@@ -15,11 +15,28 @@
     <button class="menu-btn" id="menuBtn"> ☰ </button>
 </header>
 <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const menu = document.getElementById("menu");
 
-    menuBtn?.addEventListener("click", () => {
-        menu?.classList.toggle("active");
+    document.addEventListener("click", (e) => {
+        const menu = document.getElementById("menu");
+        const menuBtn = document.getElementById("menuBtn");
+
+        if (!menu || !menuBtn) return;
+        if (!(e.target instanceof Node)) return;
+
+        const target = e.target as Node;
+
+        if (menuBtn.contains(target)) {
+            menu.classList.toggle("active");
+            return;
+        }
+        if (menu.contains(target)) {
+            const link = (target as HTMLElement).closest("a");
+            if (link) {
+                menu.classList.remove("active");
+            }
+        } else {
+            menu.classList.remove("active");
+        }
     });
 </script>
 <style>
@@ -66,7 +83,6 @@
         padding-right: 5.5rem;
         font-size: 16px;
         font-weight: 600;
-        
     }
 
     .header-links {
@@ -74,7 +90,6 @@
         gap: 1rem;
         flex: 1;
         justify-content: center;
-        
     }
 
     .header-links a {
@@ -95,8 +110,6 @@
         color: #7777aa;
         font-size: 2rem;
         cursor: pointer;
-       
-        
     }
 
     @media (max-width: 768px) {
@@ -123,16 +136,13 @@
 
             padding: 1rem 0;
             display: none;
-
-        
         }
 
         .header-links.active {
             display: flex;
         }
 
-        
-        .header-perfil{
+        .header-perfil {
             font-size: 1.5rem;
         }
     }
