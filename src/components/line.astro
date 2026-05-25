@@ -2,28 +2,48 @@
 const { textContent, oneTitle, twoTitle } = Astro.props;
 ---
 
-<div class="content-line">
-    <div class="line"></div>
-</div>
-<div class="text">
-    <h2 class="title">
-        <span class="font">{oneTitle}</span>
-        <span class="font-rgb">{twoTitle}</span>
-    </h2>
+<div class="absolute-line-content">
+    <div class="absolute-line">
+        <div class="content-line">
+            <div class="line"></div>
+        </div>
+        <div class="text">
+            <h2 class="title">
+                <span class="font">{oneTitle}</span>
+                <span class="font-rgb">{twoTitle}</span>
+            </h2>
 
-    <h3 class="description" style="--color: #6d6da0; --font-size: 16px;">
-        {textContent}
-    </h3>
+            <h3
+                class="description"
+                style="--color: #6d6da0; --font-size: 16px;"
+            >
+                {textContent}
+            </h3>
+        </div>
+    </div>
 </div>
 
 <style>
+    .absolute-line-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .absolute-line {
+        width: 100%;
+        max-width: 2560px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
     :root {
         --color: white;
         --font-size: 3rem;
     }
 
     .text {
-        width: 80%;
+        width: 100%;
+        max-width: 2060px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -64,6 +84,7 @@ const { textContent, oneTitle, twoTitle } = Astro.props;
 
     .content-line {
         width: 100%;
+        max-width: 2060px;
         margin-top: 4rem;
         margin-bottom: 7rem;
         display: flex;
@@ -93,8 +114,8 @@ const { textContent, oneTitle, twoTitle } = Astro.props;
             width: 100%;
         }
 
-        .description{
-             text-align: center;
+        .description {
+            text-align: center;
             width: 100%;
         }
     }

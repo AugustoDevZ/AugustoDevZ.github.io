@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ import { ClientRouter } from "astro:transitions";
 		<main class="content-index-1">
 			<slot />
 		</main>
+		<Footer></Footer>
 	</body>
 </html>
 
@@ -75,13 +77,15 @@ import { ClientRouter } from "astro:transitions";
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
-		
+		flex-direction: row;
+
 	}
 
 	@media (min-width: 1024px){
 
 	.content-index-1{
 		justify-content: center;
+		
 	}
 
 

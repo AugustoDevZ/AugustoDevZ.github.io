@@ -2,34 +2,44 @@
 const { subTitle, icon } = Astro.props;
 ---
 
-<div class="subtitle" >
-    
-    <h2 ><i class={icon}></i> <span class="title" >{subTitle}</span></h2>
+<div class="subtitle-content">
+    <div class="subtitle">
+        <h2 class="texto">
+            <i class={icon}></i>
+            <span class="title">{subTitle}</span>
+        </h2>
+    </div>
 </div>
 
 <style>
-
-    .content-icon{
+    .content-icon {
         border-radius: 12px;
         background-color: #161432;
         padding: 0.5rem;
-        color: #4B40A3;
+        color: #4b40a3;
         font-size: 14px;
     }
 
-    .title{
+    .title {
         margin-left: 1rem;
         font-weight: lighter;
-        
     }
 
-    .subtitle{
-         padding-top: 3rem;
-         width: 100%;
-         color: white;
-         font-size: 12px;
-         
-    }
+    .subtitle {
+        width: 100%;
+        max-width: 2100px;
+        padding-top: 3rem;
+        color: white;
+        font-size: 12px;
 
-    
+    }
+    .subtitle-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .texto {
+        text-align: start;
+    }
 </style>

@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Card from "../../components/Card.astro";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Header accion="/" />
+	<div style="margin-top: 7rem;">
+		<Card
+			Title="Ayllu Restaurant"
+			tag1="Esritorio APP"
+			tag2="Figma"
+			tag3="Backend"
+			context="Cree junto a un equipo una aplicación para digitalizar su sistema administrativo de un restaurante llamado Ayllu"
+			reto="Desarrollar una aplicación escalable y eficiente capaz de administrar inventario, ventas y clientes de u nrestaurante. teniendo en cuenta las buenas prácticas e implementació nde diseño UI/UX."
+
+			solution = "Desarrollé de manera grupal una aplicación escalable y eficiente capaz de administrar inventario, ventas y clientes de un restaurante"		
+			result = "Se obtuvo una aplicación estable, rápida y altamente configurable, utilizado para la administración y automatización de Ayllu restaurant. La implementación de sistemas de seguridad, moderación y utilidades mejoró significativamente la gestión de la app, ofreciendo además una experiencia visual moderna teniendo en cuenta la experiencia de usuario."
+
+			stack={["SQL", "MySQL", "WPF .NET"]}
+
+			role = "Director de proyecto & Desarrollador Full Stack"
+			img = {["/Ayllu.png"]}
+			link = "https://github.com/AugustoDevZ/Restaurant-APP-ESDAD"
+		/>
+	</div>
+</Layout>

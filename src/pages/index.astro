@@ -5,7 +5,7 @@ import Content from "../components/ContentMain.astro";
 import Line from "../components/line.astro";
 import SubLine from "../components/SubtitleLine.astro";
 import ContentGroup from "../components/ContentProject.astro";
-import ContentGroup2 from "../components/ContentProject2.astro";
+import ContentGroup3 from "../components/ContentProject3.astro";
 import Footer from "../components/Footer.astro"
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -14,7 +14,7 @@ import Footer from "../components/Footer.astro"
 
 <Layout>
 	<Header/>
-	<div style="padding: 6rem;  ">
+	<div style="padding: 6rem; width: 100%; ">
 		<Content/>
 		<section id="portafolio" ></section>
 		<Line
@@ -24,11 +24,10 @@ import Footer from "../components/Footer.astro"
 		/>
 		<SubLine subTitle="Soluciones completas" icon = "fa-solid fa-building-circle-check content-icon"/>
 		<ContentGroup/>
-		<SubLine subTitle="Proyectos Front" icon = "fa-solid fa-code content-icon"/>
-		<ContentGroup2/>
-		
+		<SubLine subTitle="Soluciones incompletas o en proceso" icon = "fa-solid fa-building-circle-check content-icon"/>
+		<ContentGroup3/>
 	</div>
-	<Footer/>
+	
 </Layout>
 
 

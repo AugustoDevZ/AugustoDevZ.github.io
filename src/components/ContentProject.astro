@@ -3,21 +3,10 @@ import Group from "../components/group.astro";
 ---
 
 <section class="group-content">
-    <Group
-        title="Zrute "
-        text="Una app web dedicada a el trazo de rutas de medios de transporte cerca de ti y de tu destino en la ciudad de Trujillo - Perú"
-        link="/portafolio/zrute"
-        info1="Web App"
-        info2="Maps App"
-        info3="Private project"
-        color1="#42658f"
-        color2="#278883"
-        colorBorderHover="#2f4267"
-        colorBorder="#242d4d"
-    />
+    
     <Group
         title="ScanEx "
-        text="Una app para escritorio dedicado a la búsqueda optimizada de datos en archivos de bases de datos.txt  y personalización de búsqueda con regex."
+        text="Una app para escritorio dedicado a la búsqueda optimizada de datos en archivos .txt como Logs,Bases de datos, etc.  y personalización de búsqueda con regex."
         link="/portafolio/ScanEx"
         info1="Windows App"
         info2="External API"
@@ -39,26 +28,41 @@ import Group from "../components/group.astro";
         colorBorderHover="#664521"
         colorBorder="#31242A"
     />
+    
     <Group
-        title="Zadints Tech"
-        text="Una plataforma para laa presentacion de la marca Zadints y sus productos en general."
-        link="/portafolio/zadints-web"
+        title="Portafolio Web"
+        text="Una app web estática creada con Astro. Esta página muestra la experiencia recaudada e importante."
+        link="/portafolio/portafolio"
         info1="Web App"
-        info2="API Zadints"
-        info3="Public private"
-        color1="#EA5A0C"
-        color2="#F29A0B"
-        colorBorderHover="#5E2717"
-        colorBorder="#2E1924"
+        info2="SSG"
+        info3="Public project"
+        color1="#5A67F9"
+        color2="#7069F6"
+        colorBorderHover="#3B2A70"
+        colorBorder="#201948"
+    />
+    <Group
+        title="UI Model_1"
+        text="Diseño front UI/UX para una app de escritorio echa en WPF. Esta app cuenta con varias tonalidades (Clic para ver más)"
+        link="/portafolio/ui-model"
+        info1="Windows App"
+        info2="External API"
+        info3="Public project"
+        color1="#1E3D8C"
+        color2="#08AFD0"
+        colorBorderHover="#111C46"
+        colorBorder="#141F50"
     />
 </section>
 
 <style>
     .group-content {
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
+
     }
 </style>

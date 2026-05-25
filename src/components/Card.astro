@@ -14,8 +14,19 @@ interface Props {
     link: string;
 }
 
-const { Title, tag1, tag2, tag3, context, reto, solution, result, role, img , link} =
-    Astro.props;
+const {
+    Title,
+    tag1,
+    tag2,
+    tag3,
+    context,
+    reto,
+    solution,
+    result,
+    role,
+    img,
+    link,
+} = Astro.props;
 
 const { stack = [] } = Astro.props;
 ---
@@ -96,8 +107,10 @@ const { stack = [] } = Astro.props;
                     </div>
                 )
             }
-            
-            <a class="stats" href={link}><div>Visita Proyecto</div></a>
+
+            <a class="anchor" href={link}
+                ><div class="link-style">Visita Proyecto</div></a
+            >
         </div>
     </div>
 </div>
@@ -108,7 +121,22 @@ const { stack = [] } = Astro.props;
         font-family: sans-serif;
         padding: 2rem;
     }
+    .link-style {
+        background-color: #1b2544;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 15px;
+        text-align: center;
+    }
 
+    .link-style:hover {
+        background-color: #243159;
+    }
+
+    .anchor {
+        text-decoration: none;
+        color: white;
+    }
     .project-card {
         max-width: 1000px;
         margin: 2rem;

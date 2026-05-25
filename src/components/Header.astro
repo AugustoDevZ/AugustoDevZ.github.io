@@ -11,7 +11,7 @@
                 >Descargar CV</a
             >
         </li>
-    </ul>l
+    </ul>
     <button class="menu-btn" id="menuBtn"> ☰ </button>
 </header>
 <script>
@@ -57,7 +57,7 @@
         text-decoration: none;
         color: #ffffff;
         font-weight: 600;
-        font-size: 14px;
+        margin: 0; 
     }
 
     .button-type:hover {
@@ -66,15 +66,17 @@
 
     .header {
         width: 100%;
+        max-width: 2560px;
         position: fixed;
         background-color: #0d0d2785;
         display: flex;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         flex-wrap: wrap;
         border-bottom: 2px solid #1b1b42;
         backdrop-filter: blur(2px);
         z-index: 100;
+        font-size: 14px;
     }
 
     .header-perfil {
@@ -83,13 +85,17 @@
         padding-right: 5.5rem;
         font-size: 16px;
         font-weight: 600;
+        max-width: 50%;
+        width: 40%;
     }
 
     .header-links {
         display: flex;
         gap: 1rem;
-        flex: 1;
+        max-width: 50%;
+        width: 40%;
         justify-content: center;
+   
     }
 
     .header-links a {
@@ -116,6 +122,7 @@
         .header {
             justify-content: space-between;
             height: 7rem;
+            max-height: 7rem;
         }
 
         .menu-btn {
@@ -142,8 +149,6 @@
             display: flex;
         }
 
-        .header-perfil {
-            font-size: 1.5rem;
-        }
+        
     }
 </style>
